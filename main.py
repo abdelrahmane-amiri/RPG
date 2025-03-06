@@ -1,18 +1,17 @@
 import pygame
 from config import *
+from ui.menu import bg
 
 pygame.init()
-screen = pygame.display.set_mode((WIDTH,HEIGHT))
-screen = pygame.display.set_caption("RPG")
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("RPG")
 
-def main():
-    running = True
-    
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
+running = True
+background = bg()
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
 
     pygame.display.update()
-
-main()
